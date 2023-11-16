@@ -1,0 +1,14 @@
+/* Blog_Content.css */
+
+.blog-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+  }
+  
+  .blog-details {
+    width: 50%;
+    text-align: center;
+  }
+  
