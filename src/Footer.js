@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Footer.css';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram
+} from "@fortawesome/free-brands-svg-icons";
 function Footer() {
     const [showLinks, setShowLinks] = useState(false);
   
@@ -12,7 +16,7 @@ return (
 <div className="reach-me-section">
 <div className="reach-me-content">
   <div className="reach-me-icon">
-    <span>REACH ME THROUGH</span>
+    <span className="title">Reach me</span>
     <div className="menu-icon" onClick={toggleMenu}>
       <div className="bar"></div>
       <div className="bar"></div>
@@ -26,10 +30,24 @@ return (
   <p className="subtext">
     Whether you're ready to dive in or just want to discuss with me, I would be grateful if you contact with me.
   </p>
-  <form className="contact-form">
+     <form className="contact-form">
     <textarea id="message" name="message" placeholder="Enter your message"></textarea>
     <button type="submit">Submit</button>
   </form>
+</div>
+<div class="social-container">
+      <h3>Social Follow</h3>
+      <a href="https://www.facebook.com/learnbuildteach/"
+        className="facebook social">
+        <FontAwesomeIcon icon={faFacebook} size="2x" />
+      </a>
+      <a href="https://www.twitter.com/jamesqquick" className="twitter social">
+        <FontAwesomeIcon icon={faTwitter} size="2x" />
+      </a>
+      <a href="https://www.instagram.com/learnbuildteach"
+        className="instagram social">
+        <FontAwesomeIcon icon={faInstagram} size="2x" />
+      </a>
 </div>
 </div>
 );

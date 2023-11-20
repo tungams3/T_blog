@@ -1,17 +1,14 @@
 import React from 'react';
 import Navbar from './Navbar';
+import Navbar_Post from './Navbar_Post';
 import Blog_Content from './Blog_Content';
 function Blog_Post1(props) {
     return (
         <div>
-            <Navbar/>
-            <Blog_Content image="/img/logo192.png" introduction="On-chip debug (OCD) interfaces can provide chip-level control of a target device and are a primary vector used by engineers, researchers, and hackers to extract program code or data, modify memory contents, or affect device operation on-the-fly. Depending on the complexity of the target device, manually locating available OCD interfaces can be a difficult and time consuming task, sometimes requiring physical destruction or modification of the device.
+            <Navbar_Post />
+            <Blog_Content image={process.env.PUBLIC_URL+ "/Jtag_illustrate.jpg"} introduction="JTAG is short for Joint Test Action Group and generally refers to on-chip debugging interfaces that follow the IEEE 1149.x standard. The standard doesn’t mandate a certain connection – it just dictates a standard for communicating with chips in a device. It uses 5 pins: TCK, TMS, TDI, TDO and (options) TRST; which are (Test) Clock, Mode Select, Data In, Data Out, and Reset.
 
-JTAGulator is an open source hardware tool that assists in identifying OCD interfaces from test points, vias, component pads, or connectors on a target device.
-
-Assembled JTAGulators are available from Parallax, Inc. For questions and technical support, please contact support@parallax.com. Support is only provided for genuine JTAGulators, which are hot pink in color and contain verifiable serial numbers.
-
-This design is distributed under a Creative Commons Attribution-3.0 United States license. The JTAGulator name and logo are registered trademarks of Grand Idea Studio, Inc. The trademarks may not be used on derived works without permission." Method="Research"/>
+It can be useful to hardware hackers in various ways, such as extracting device IDs, extracting firmware, overwriting memory." Method="Research"/>
         </div>
     );
 }

@@ -1,24 +1,25 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-function Navbar() {
+const Navbar = ({ handleScroll }) =>  {
+  // Add refs for other sections as needed
     return (
   <div>
     <header>
       <nav className="navbar">
         <ul className="nav-links">
         <li>
-          <Link to="/">Home</Link>
+          <button>Home</button>
         </li>
         <li>
-          <Link to="/About">About</Link>
+          <button onClick={() => handleScroll('aboutRef')}>About</button>
         </li>
         <li>
-          <Link to="/Project">Project</Link>
+        <button onClick={() => handleScroll('projectRef')}>Post</button>
         </li>
         <li>
-          <Link to="/Contact">Contact</Link>
+        <button onClick={() => handleScroll('contactRef')}>Contact</button>
         </li>
         </ul>
       </nav>
